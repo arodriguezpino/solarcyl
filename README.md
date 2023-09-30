@@ -34,4 +34,4 @@ SolarCyL será desarrollada con las siguientes tecnologías:
 
 ********Esquema API********
 
-![Diagram.png](https://github.com/arodriguezpino/solarcyl/resources/Diagram.png)
+![Diagram.png](https://github.com/arodriguezpino/solarcyl/blob/main/resources/Diagram.png)

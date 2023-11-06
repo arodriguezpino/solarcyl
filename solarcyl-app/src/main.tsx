@@ -7,6 +7,7 @@ import { MapPage } from "./components/pages/Map/Map.page";
 import { EvolutionPage } from "./components/pages/Evolution/Evolution.page";
 import { CalculatorPage } from "./components/pages/Calulator/Calculator.page";
 import { NewsPage } from "./components/pages/News/News.page";
+import 'leaflet/dist/leaflet.css'
 
 const router = createBrowserRouter([
   {

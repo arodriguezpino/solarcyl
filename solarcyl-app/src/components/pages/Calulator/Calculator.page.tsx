@@ -1,5 +1,7 @@
 export const CalculatorPage = () => {
   return (
-    <div>Calculator.page</div>
-  )
-}
+    <>
+      <div>Calculator.page</div>
+    </>
+  );
+};

@@ -1,5 +1,7 @@
 export const MapPage = () => {
   return (
-    <div>Map.page</div>
-  )
-}
+    <>
+      <p>Mapa</p>
+    </>
+  );
+};

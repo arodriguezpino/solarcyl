@@ -39,7 +39,7 @@
 .nav__items {
   padding-bottom: 4rem;
   font-family: "roboto";
-  a {
+  :is(a) {
     position: relative;
     display: block;
     top: -35px;
@@ -74,7 +74,7 @@
   &:hover a:after {
     opacity: 1;
   }
-  svg {
+  :is(svg) {
     width: 26px;
     height: 26px;
     position: relative;

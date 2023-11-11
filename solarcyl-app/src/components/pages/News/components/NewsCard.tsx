@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import "./NewsCard.css";
 import Card from "react-bootstrap/Card";
 

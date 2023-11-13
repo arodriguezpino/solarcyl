@@ -6,7 +6,7 @@ import EvolutionSvg from "../../assets/icons/evolution.svg";
 import NewsSvg from "../../assets/icons/news.svg";
 import SunSvg from "../../assets/icons/sun.svg";
 
-export const Sidebar = () => {
+const Sidebar = () => {
   return (
     <>
       <nav className="nav__cont">
@@ -41,3 +41,5 @@ export const Sidebar = () => {
     </>
   );
 };
+
+export default Sidebar;

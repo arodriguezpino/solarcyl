@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { NewsCard } from "./components/NewsCard";
 import { NewsObj } from "../../../services/NewsService";
-import { Title } from "../../title/Title";
+import Title from "../../title/Title";
 import { Carousel } from "react-bootstrap";
 import "./News.page.css";
 
-export const NewsPage = () => {
+const NewsPage = () => {
   const [news, setNews] = useState<NewsObj>();
 
   useEffect(() => {
@@ -49,3 +49,5 @@ export const NewsPage = () => {
     </>
   );
 };
+
+export default NewsPage;

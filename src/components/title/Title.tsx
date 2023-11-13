@@ -3,7 +3,7 @@ interface TitleProps {
   subtitle?: string;
 }
 
-export const Title = (props: TitleProps) => {
+const Title = (props: TitleProps) => {
   return (
     <div className="py-3 header m-3">
       <h1 className="text-center mx-auto mt-3">{props.title}</h1>
@@ -13,3 +13,5 @@ export const Title = (props: TitleProps) => {
     </div>
   );
 };
+
+export default Title;

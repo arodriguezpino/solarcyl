@@ -1,0 +1,5 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon,
+.carousel-indicators {
+  filter: invert(100%); /* Invertir los colores del ícono para que sea negro */
+}

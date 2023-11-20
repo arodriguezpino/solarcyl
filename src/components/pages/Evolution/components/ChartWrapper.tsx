@@ -13,7 +13,9 @@ export const ChartWrapper = (props: ChartWrapperProps) => {
         <h5 className="fw-bold">{props.title}</h5>
         <p>{props.description}</p>
       </div>
-      <div className="col-md-9 border">{props.element}</div>
+      <div className="col-md-9 border d-flex align-items-center justify-content-center">
+        {props.element}
+      </div>
     </div>
   );
 };

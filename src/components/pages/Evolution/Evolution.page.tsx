@@ -12,16 +12,19 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import { LoadingSpinner } from "../../spinner/LoadingSpinner";
 
 const EvolutionPage = () => {
   const [totalConsumption, setTotalConsumption] = useState<TotalConsumption[]>(
     []
   );
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const getTotalConsumption = async () => {
       const data = await EvolutionService.getTotalProvinces();
       setTotalConsumption(data);
+      setIsLoading(false);
     };
     getTotalConsumption();
   }, []);
@@ -75,7 +78,9 @@ const EvolutionPage = () => {
       <ChartWrapper
         title="Consumo por provincia 2023"
         description="En el siguiente gráfico podemos observar el consumo total que ha gastado cada provincia de Castilla y León, el total representa el sumatorio de todos los sectores del mercado, en el mes actual"
-        element={<Bar data={data} options={options} />}
+        element={
+          isLoading ? <LoadingSpinner /> : <Bar data={data} options={options} />
+        }
       />
     </>
   );

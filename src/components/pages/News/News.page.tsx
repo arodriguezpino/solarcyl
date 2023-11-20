@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { NewsCard } from "./components/NewsCard";
-import { NewsObj } from "../../../services/NewsService";
+import { NewsObj } from "../../../services/News/NewsService";
 import Title from "../../title/Title";
 import { Carousel } from "react-bootstrap";
 import "./News.page.css";
@@ -18,10 +18,7 @@ const NewsPage = () => {
       }
     )
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setNews(data);
-      })
+      .then((data) => setNews(data))
       .catch((error) => console.log(error));
   }, []);
 

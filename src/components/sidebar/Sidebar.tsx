@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 import CalculatorSvg from "../../assets/icons/calculator.svg";
 import MapSvg from "../../assets/icons/map.svg";
@@ -9,35 +9,85 @@ import SunSvg from "../../assets/icons/sun.svg";
 const Sidebar = () => {
   return (
     <>
-      <nav className="nav__cont">
-        <ul className="nav">
-          <li className="nav__items">
-            <div className="logo">
-              <img src={SunSvg} />
-            </div>
-            <h4 className="title">SolarCyL</h4>
+      <div
+        className="d-flex flex-column flex-shrink-0 p-3 bg-light fixed-sidebar"
+      >
+        <a
+          href="/"
+          className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
+        >
+          <img src={SunSvg} className="bi me-2" width="40" height="32"></img>
+          <span className="fs-4">SolarCyl</span>
+        </a>
+        <hr />
+        <ul className="nav nav-pills flex-column mb-auto">
+          <li className="nav-item">
+            <NavLink
+              to={"calculator"}
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link link-dark"
+              }
+            >
+              <img
+                src={CalculatorSvg}
+                className="bi me-2"
+                width="16"
+                height="16"
+              ></img>
+              Calculator
+            </NavLink>
           </li>
-          <li className="nav__items">
-            <img src={CalculatorSvg} />
-            <Link to={"calculator"}>Calculator</Link>
+          <li>
+            <NavLink
+              to={"evolution"}
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link link-dark"
+              }
+            >
+              <img
+                src={EvolutionSvg}
+                className="bi me-2"
+                width="16"
+                height="16"
+              ></img>
+              Evolution
+            </NavLink>
           </li>
-
-          <li className="nav__items ">
-            <img src={EvolutionSvg} />
-            <Link to={"evolution"}>Evolution</Link>
+          <li>
+            <NavLink
+              to={"map"}
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link link-dark"
+              }
+            >
+              <img
+                src={MapSvg}
+                className="bi me-2"
+                width="16"
+                height="16"
+              ></img>
+              Map
+            </NavLink>
           </li>
-
-          <li className="nav__items ">
-            <img src={MapSvg} />
-            <Link to={"map"}>Map</Link>
-          </li>
-
-          <li className="nav__items ">
-            <img src={NewsSvg} />
-            <Link to={"news"}>News</Link>
+          <li>
+            <NavLink
+              to={"news"}
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link link-dark"
+              }
+            >
+              <img
+                src={NewsSvg}
+                className="bi me-2"
+                width="16"
+                height="16"
+              ></img>
+              News
+            </NavLink>
           </li>
         </ul>
-      </nav>
+        <hr />
+      </div>
     </>
   );
 };

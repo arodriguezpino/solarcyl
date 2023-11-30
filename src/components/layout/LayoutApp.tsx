@@ -4,12 +4,12 @@ import "./LayoutApp.css";
 
 const Layout = () => {
   return (
-    <>
+    <div className="d-flex">
       <Sidebar />
       <div className="wrapper">
         <Outlet />
       </div>
-    </>
+    </div>
   );
 };
 

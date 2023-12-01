@@ -17,9 +17,9 @@
 }
 
 .header {
-  background-color: #ba0c2f;
-  color: white;
-  border-radius: 10px;
+  background-color: #ba0c2f !important;
+  color: white !important;
+  border-radius: 10px !important;
 }
 /* a {
   font-weight: 500;

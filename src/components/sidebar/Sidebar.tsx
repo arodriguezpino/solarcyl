@@ -5,6 +5,7 @@ import MapSvg from "../../assets/icons/map.svg";
 import EvolutionSvg from "../../assets/icons/evolution.svg";
 import NewsSvg from "../../assets/icons/news.svg";
 import SunSvg from "../../assets/icons/sun.svg";
+import BookSvg from "../../assets/icons/book.svg";
 
 const Sidebar = () => {
   return (
@@ -83,6 +84,22 @@ const Sidebar = () => {
                 height="16"
               ></img>
               News
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"documentation"}
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link link-dark"
+              }
+            >
+              <img
+                src={BookSvg}
+                className="bi me-2"
+                width="16"
+                height="16"
+              ></img>
+              Documentation
             </NavLink>
           </li>
         </ul>

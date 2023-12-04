@@ -1,15 +1,13 @@
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import {
-  createHashRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/layout/LayoutApp";
 import MapPage from "./components/pages/Map/Map.page";
 import EvolutionPage from "./components/pages/Evolution/Evolution.page";
 import CalculatorPage from "./components/pages/Calulator/Calculator.page";
 import NewsPage from "./components/pages/News/News.page";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Documentation } from "./components/pages/Documentation/Documentation.page";
 
 const router = createHashRouter([
   {
@@ -31,6 +29,10 @@ const router = createHashRouter([
       {
         path: "news",
         element: <NewsPage />,
+      },
+      {
+        path: "documentation",
+        element: <Documentation />,
       },
     ],
   },

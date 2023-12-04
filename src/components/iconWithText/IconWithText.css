@@ -1,0 +1,31 @@
+.icon-with-text {
+  height: 75px;
+}
+
+.no-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.icon-with-text #arrow {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+  left: 0;
+  position: relative;
+}
+
+.icon-with-text:hover #arrow {
+  visibility: visible;
+  opacity: 1;
+  left: 10px;
+}
+
+.icon-with-text {
+  transition: 0.3s;
+}
+
+.icon-with-text:hover {
+  color: white;
+  background-color: #ba0c2f;
+}

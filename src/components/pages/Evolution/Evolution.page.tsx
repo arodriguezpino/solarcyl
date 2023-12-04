@@ -3,6 +3,7 @@ import { ChartWrapper } from "./components/ChartWrapper";
 import EvolutionService from "../../../services/Evolution/EvolutionService";
 import { useEffect, useState } from "react";
 import { TotalConsumption } from "../../../services/Evolution/MonthlyFee.model";
+import { Alert, AlertHeading, Container } from "react-bootstrap";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -75,6 +76,15 @@ const EvolutionPage = () => {
         title="Evolución"
         subtitle="Esta es la evolución que ha tenido la energía renovable en nuestro país"
       />
+      <Container>
+        <Alert variant="warning">
+          <AlertHeading>Aviso importante</AlertHeading>
+          <p>
+            Configuraciones de restricción en el navegador podrían afectar a
+            esta página.
+          </p>
+        </Alert>
+      </Container>
       <ChartWrapper
         title="Consumo por provincia 2023"
         description="En el siguiente gráfico podemos observar el consumo total que ha gastado cada provincia de Castilla y León, el total representa el sumatorio de todos los sectores del mercado, en el mes actual"

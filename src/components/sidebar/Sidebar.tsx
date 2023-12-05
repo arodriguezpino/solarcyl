@@ -1,15 +1,15 @@
-import { NavLink } from "react-router-dom";
-import "./Sidebar.css";
-import CalculatorSvg from "../../assets/icons/calculator.svg";
-import MapSvg from "../../assets/icons/map.svg";
-import EvolutionSvg from "../../assets/icons/evolution.svg";
-import NewsSvg from "../../assets/icons/news.svg";
-import SunSvg from "../../assets/icons/sun.svg";
-import BookSvg from "../../assets/icons/book.svg";
-import { useTranslation } from "react-i18next";
-import { Button, ToggleButton } from "react-bootstrap";
 import { changeLanguage } from "i18next";
 import { useState } from "react";
+import { Button } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
+import BookSvg from "../../assets/icons/book.svg";
+import CalculatorSvg from "../../assets/icons/calculator.svg";
+import EvolutionSvg from "../../assets/icons/evolution.svg";
+import MapSvg from "../../assets/icons/map.svg";
+import NewsSvg from "../../assets/icons/news.svg";
+import SunSvg from "../../assets/icons/sun.svg";
+import "./Sidebar.css";
 
 const Sidebar = () => {
   const { t } = useTranslation("translations");

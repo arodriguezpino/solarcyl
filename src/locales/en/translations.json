@@ -1,0 +1,68 @@
+{
+    "title": "Solarcyl",
+    "pages": {
+        "map": {
+            "navTitle": "Map",
+            "title": "Map of excluded areas in Castilla y León",
+            "subtitle": "Here you can find out about the photovoltaic exclusion in Castilla y León.",
+            "cards": {
+                "card1": {
+                    "title": "Map excluding photovoltaic CyL"
+                },
+                "card2": {
+                    "title": "Map of the photovoltaic potential of rooftops in Valladolid"
+                }
+            }
+        },
+        "calculator": {
+            "navTitle": "Calculator",
+            "title": "Calculator",
+            "subtitle": "Here you can find out how many solar panels would be needed on your house in order to make an ecological energy transition.",
+            "accordion": {
+                "tooltip": "Perform the following steps",
+                "units": "KWh",
+                "item1": {
+                    "title": "Determine your consumption",
+                    "content": "Check your energy consumption: By analysing your electricity bills you can find out your average monthly consumption in kilowatt-hours (KWh)."
+                },
+                "item2": {
+                    "title": "Check the photovoltaic potential in your area",
+                    "content": "In the following image you can see a map with the photovoltaic potential of the entire Spanish surface. In the legend you will find the daily total according to the colour of your area.",
+                    "placeholder": "Write down the daily average for your area"
+                },
+                "item3": {
+                    "title": "Perform the calculation",
+                    "content": "To perform the calculation we will do the following",
+                    "step1": "Determine how many KWh will be produced in your area on a monthly basis with a single panel :",
+                    "step2": "Now we will calculate how many panels you will need knowing your monthly expenditure :",
+                    "step3": "are the number of solar panels needed to cover their costs.",
+                    "advise": "*Rounded upwards"
+                }
+            }
+        },
+        "documentation": {
+            "navTitle": "Docs",
+            "title": "Docs",
+            "subtitle": "Project report"
+        },
+        "evolution": {
+            "navTitle": "Evolution",
+            "title": "Evolution",
+            "subtitle": "This is how renewable energy has evolved in our country",
+            "advise": {
+                "title": "Warning",
+                "content": "Browser restriction settings may affect this page."
+            },
+            "chart": {
+                "title": "Consumption by province 2023",
+                "description": "In the following graph we can see the total consumption spent by each province of Castilla y León, the total represents the sum of all market sectors in the current month.",
+                "label": "Energy consumed by province in KWh"
+            }
+        },
+        "news": {
+            "navTitle": "News",
+            "title": "News",
+            "subtitle": "Most relevant news about photovoltaic panels and renewable energies"
+        }
+    }
+}

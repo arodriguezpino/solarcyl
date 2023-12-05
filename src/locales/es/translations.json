@@ -1,0 +1,68 @@
+{
+    "title": "Solarcyl",
+    "pages": {
+        "map": {
+            "navTitle": "Mapa",
+            "title": "Mapa zonas excluidas en Castilla y León",
+            "subtitle": "Aquí podrás informarte del excluido fotovoltaico en Castilla y León",
+            "cards": {
+                "card1": {
+                    "title": "Mapa excluido fotovoltaico CyL"
+                },
+                "card2": {
+                    "title": "Mapa del potencial fotovoltaico de los tejados de Valladolid"
+                }
+            }
+        },
+        "calculator": {
+            "navTitle": "Calculadora",
+            "title": "Calculadora",
+            "subtitle": "Aquí podras informarte de cuantas placas solares harían falta en tu casa para poder realizar una transición energética ecológica.",
+            "accordion": {
+                "tooltip": "Realiza los siguientes pasos",
+                "units": "KWh",
+                "item1": {
+                    "title": "Determina tu consumo",
+                    "content": "Consulta tu consumo energético: Analizando tus facturas de electricidad podrás conocer tu consumo promedio mensual en kilovatios-hora (KWh)."
+                },
+                "item2": {
+                    "title": "Consulta el potencial fotovoltaico de tu zona",
+                    "content": "En la siguiente imágen podrás ver un mapa con la el potencial fotovoltaico de toda la superficie Española. En la leyenda encontrarás el total diario según el color de tu zona.",
+                    "placeholder": "Escribe el promedio diario de tu zona"
+                },
+                "item3": {
+                    "title": "Realiza el calculo",
+                    "content": "Para realizar el calculo realizaremos lo siguiente",
+                    "step1": "Determinar cuantos KWh se producirán en tu zona mensualmente con un solo panel :",
+                    "step2": "Ahora calcularemos cuantos paneles necesiarás sabiendo tu gasto mensual :",
+                    "step3": "son la cantidad de paneles solares que se necesitan para cubrir sus gastos.",
+                    "advise": "*Se redondea al alza"
+                }
+            }
+        },
+        "documentation": {
+            "navTitle": "Documentación",
+            "title": "Documentación",
+            "subtitle": "Memoria del proyecto"
+        },
+        "evolution": {
+            "navTitle": "Evolución",
+            "title": "Evolución",
+            "subtitle": "Esta es la evolución que ha tenido la energía renovable en nuestro país",
+            "advise": {
+                "title": "Aviso importante",
+                "content": "Configuraciones de restricción en el navegador podrían afectar a esta página."
+            },
+            "chart": {
+                "title": "Consumo por provincia 2023",
+                "description": "En el siguiente gráfico podemos observar el consumo total que ha gastado cada provincia de Castilla y León, el total representa el sumatorio de todos los sectores del mercado, en el mes actual",
+                "label": "Energía consumida por provincia en KWh"
+            }
+        },
+        "news": {
+            "navTitle": "Noticias",
+            "title": "Noticias",
+            "subtitle": "Noticias más relevantes acerca de placas fotovoltaicas y energias renovables"
+        }
+    }
+}

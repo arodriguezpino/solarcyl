@@ -4,18 +4,19 @@ import Title from "../../title/Title";
 import "./Map.page.css";
 import { IconWithText } from "../../iconWithText/IconWithText";
 import jcylLogo from "../../../assets/images/junta-de-castilla-y-leon.png";
+import vallLogo from "../../../assets/images/logo_ava.png"
+import { useTranslation } from "react-i18next";
 
 const MapPage = () => {
+  const { t } = useTranslation("translations");
+  const tPrefix = "pages.map";
+
   return (
     <>
       <Title
-        title="Mapa zonas excluidas en Castilla y León"
-        subtitle="Aquí podrás informarte del excluido fotovoltaico en Castilla y León "
+        title={t(`${tPrefix}.title`)}
+        subtitle={t(`${tPrefix}.subtitle`)}
       />
-      {/* <iframe
-        src="https://solaratlas.es/valladolid/map#map"
-        className="map"
-      ></iframe> */}
       <div className="row">
         <div className="col">
           <MapContainer
@@ -58,12 +59,14 @@ const MapPage = () => {
           <IconWithText
             icon={jcylLogo}
             link="https://idecyl.jcyl.es/vcig/"
-            text="Mapa de excluido fotovoltaico"
+            text={t(`${tPrefix}.cards.card1.title`)}
+            iconWidth="normal"
           />
           <IconWithText
-            icon={jcylLogo}
+            icon={vallLogo}
             link="https://solaratlas.es/valladolid/map"
-            text="Mapa de potencial fotovoltaico de los tejados de Valladolid"
+            text={t(`${tPrefix}.cards.card2.title`)}
+            iconWidth="small"
           />
         </div>
       </div>

@@ -4,9 +4,12 @@ import { NewsObj } from "../../../services/News/NewsService";
 import Title from "../../title/Title";
 import { Carousel } from "react-bootstrap";
 import "./News.page.css";
+import { useTranslation } from "react-i18next";
 
 const NewsPage = () => {
   const [news, setNews] = useState<NewsObj>();
+  const { t } = useTranslation("translations");
+  const tPrefix = "pages.news";
 
   useEffect(() => {
     fetch(
@@ -25,8 +28,8 @@ const NewsPage = () => {
   return (
     <>
       <Title
-        title="Noticias"
-        subtitle="Noticias más relevantes acerca de placas fotovoltaicas y energias renovables"
+        title={t(`${tPrefix}.title`)}
+        subtitle={t(`${tPrefix}.subtitle`)}
       />
       <div className="container p-3">
         <Carousel>

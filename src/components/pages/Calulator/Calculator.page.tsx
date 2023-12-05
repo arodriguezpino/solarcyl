@@ -8,33 +8,34 @@ import {
 import Title from "../../title/Title";
 import SpainMapImage from "../../../assets/images/potencial_fotovoltaico_espana.png";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const CalculatorPage = () => {
-  const [consumption, setConsumption] = useState(0.00);
-  const [dailyPotential, setDailyPotential] = useState(0.00);
+  const [consumption, setConsumption] = useState(0.0);
+  const [dailyPotential, setDailyPotential] = useState(0.0);
   const totalPanels = Math.ceil(consumption / (dailyPotential * 30)) | 0;
+  const { t } = useTranslation("translations");
+  const tPrefix = "pages.calculator";
 
   return (
     <>
       <Title
-        title="Calculadora"
-        subtitle="Aquí podras informarte de cuantas placas solares harían falta en tu casa para poder realizar una transición energética ecológica."
+        title={t(`${tPrefix}.title`)}
+        subtitle={t(`${tPrefix}.subtitle`)}
       />
       <div className="p-3">
-        <h5 className="fw-bold">Realiza los siguientes pasos : </h5>
+        <h5 className="fw-bold">{t(`${tPrefix}.accordion.tooltip`)}</h5>
         <Accordion>
           <AccordionItem eventKey="0">
             <Accordion.Header>
-              <p className="fw-bold">Determina tu consumo</p>
+              <p className="fw-bold">{t(`${tPrefix}.accordion.item1.title`)}</p>
             </Accordion.Header>
             <Accordion.Body>
-              <p>
-                Consulta tu consumo energético: Analizando tus facturas de
-                electricidad podrás conocer tu consumo promedio mensual en
-                kilovatios-hora (KWh).
-              </p>
+              <p>{t(`${tPrefix}.accordion.item1.content`)}</p>
               <InputGroup>
-                <InputGroup.Text>KWh</InputGroup.Text>
+                <InputGroup.Text>
+                  {t(`${tPrefix}.accordion.units`)}
+                </InputGroup.Text>
                 <Form.Control
                   min={0}
                   type="number"
@@ -46,24 +47,20 @@ const CalculatorPage = () => {
           </AccordionItem>
           <AccordionItem eventKey="1">
             <Accordion.Header>
-              <p className="fw-bold">
-                Consulta el potencial fotovoltaico de tu zona
-              </p>
+              <p className="fw-bold">{t(`${tPrefix}.accordion.item2.title`)}</p>
             </Accordion.Header>
             <Accordion.Body>
-              <p>
-                En la siguiente imágen podrás ver un mapa con la el potencial
-                fotovoltaico de toda la superficie Española. En la leyenda
-                encontrarás el total diario según el color de tu zona.
-              </p>
+              <p>{t(`${tPrefix}.accordion.item2.content`)}</p>
               <InputGroup>
-                <InputGroup.Text>KWh</InputGroup.Text>
+                <InputGroup.Text>
+                  {t(`${tPrefix}.accordion.units`)}
+                </InputGroup.Text>
                 <Form.Control
                   min={0}
                   step={"any"}
                   type="number"
                   aria-label="Introduce tu consumo"
-                  placeholder="Escribe el promedio diario de tu zona"
+                  placeholder={t(`${tPrefix}.accordion.item2.placeholder`)}
                   onChange={(e) =>
                     setDailyPotential(parseInt(e.target.value, 0))
                   }
@@ -85,15 +82,29 @@ const CalculatorPage = () => {
           </AccordionItem>
           <AccordionItem eventKey="2">
             <Accordion.Header>
-              <p className="fw-bold">Realiza el calculo</p>
+              <p className="fw-bold">{t(`${tPrefix}.accordion.item3.title`)}</p>
             </Accordion.Header>
             <Accordion.Body>
-              <p>Para realizar el calculo realizaremos lo siguiente</p>
+              <p>{t(`${tPrefix}.accordion.item3.content`)}</p>
               <ol>
-                <li>Determinar cuantos KWh se producirán en tu zona mensualmente con un solo panel : <pre>{dailyPotential} * 30 = {dailyPotential * 30}</pre></li>
-                <li>Ahora calcularemos cuantos paneles necesiarás sabiendo tu gasto mensual : <pre>{consumption} / {dailyPotential * 30} = {totalPanels}</pre></li>
-                <p>{totalPanels}, son la cantidad de paneles solares que se necesitan para cubrir sus gastos.</p>
-                <p style={{fontSize: "14px"}}>*Se redondea al alza</p>
+                <li>
+                  {t(`${tPrefix}.accordion.item3.step1`)}
+                  <pre>
+                    {dailyPotential} * 30 = {dailyPotential * 30}
+                  </pre>
+                </li>
+                <li>
+                  {t(`${tPrefix}.accordion.item3.step2`)}
+                  <pre>
+                    {consumption} / {dailyPotential * 30} = {totalPanels}
+                  </pre>
+                </li>
+                <p>
+                  {totalPanels}, {t(`${tPrefix}.accordion.item3.step3`)}
+                </p>
+                <p style={{ fontSize: "14px" }}>
+                  {t(`${tPrefix}.accordion.item3.advise`)}
+                </p>
               </ol>
             </Accordion.Body>
           </AccordionItem>

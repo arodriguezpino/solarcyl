@@ -7,7 +7,7 @@ const Layout = () => {
     <div className="d-flex">
       <Sidebar />
       <div className="wrapper">
-        <Outlet />
+        <Outlet/>
       </div>
     </div>
   );

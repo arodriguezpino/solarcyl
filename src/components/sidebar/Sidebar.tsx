@@ -6,19 +6,23 @@ import EvolutionSvg from "../../assets/icons/evolution.svg";
 import NewsSvg from "../../assets/icons/news.svg";
 import SunSvg from "../../assets/icons/sun.svg";
 import BookSvg from "../../assets/icons/book.svg";
+import { useTranslation } from "react-i18next";
+import { Button, ToggleButton } from "react-bootstrap";
+import { changeLanguage } from "i18next";
+import { useState } from "react";
 
 const Sidebar = () => {
+  const { t } = useTranslation("translations");
+  const [inSpanish, setInSpanish] = useState(true);
   return (
     <>
-      <div
-        className="d-flex flex-column flex-shrink-0 p-3 bg-light fixed-sidebar"
-      >
+      <div className="d-flex flex-column flex-shrink-0 p-3 bg-light fixed-sidebar">
         <a
           href="/"
           className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
         >
           <img src={SunSvg} className="bi me-2" width="40" height="32"></img>
-          <span className="fs-4">SolarCyl</span>
+          <span className="fs-4">{t("title")}</span>
         </a>
         <hr />
         <ul className="nav nav-pills flex-column mb-auto">
@@ -35,7 +39,7 @@ const Sidebar = () => {
                 width="16"
                 height="16"
               ></img>
-              Calculator
+              {t("pages.calculator.navTitle")}
             </NavLink>
           </li>
           <li>
@@ -51,7 +55,7 @@ const Sidebar = () => {
                 width="16"
                 height="16"
               ></img>
-              Evolution
+              {t("pages.evolution.navTitle")}
             </NavLink>
           </li>
           <li>
@@ -67,7 +71,7 @@ const Sidebar = () => {
                 width="16"
                 height="16"
               ></img>
-              Map
+              {t("pages.map.navTitle")}
             </NavLink>
           </li>
           <li>
@@ -83,7 +87,7 @@ const Sidebar = () => {
                 width="16"
                 height="16"
               ></img>
-              News
+              {t("pages.news.navTitle")}
             </NavLink>
           </li>
           <li>
@@ -99,11 +103,34 @@ const Sidebar = () => {
                 width="16"
                 height="16"
               ></img>
-              Documentation
+              {t("pages.documentation.navTitle")}
             </NavLink>
           </li>
         </ul>
         <hr />
+        {inSpanish ? (
+          <Button
+            id="lenguage"
+            value={"es"}
+            onClick={() => {
+              changeLanguage("en");
+              setInSpanish(false);
+            }}
+          >
+            Enlgish
+          </Button>
+        ) : (
+          <Button
+            id="lenguage"
+            value={"es"}
+            onClick={() => {
+              changeLanguage("es");
+              setInSpanish(true);
+            }}
+          >
+            Spanish
+          </Button>
+        )}
       </div>
     </>
   );

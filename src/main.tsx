@@ -8,6 +8,7 @@ import CalculatorPage from "./components/pages/Calulator/Calculator.page";
 import NewsPage from "./components/pages/News/News.page";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Documentation } from "./components/pages/Documentation/Documentation.page";
+import "./bootstrap";
 
 const router = createHashRouter([
   {

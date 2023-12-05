@@ -14,12 +14,15 @@ import {
   Legend,
 } from "chart.js";
 import { LoadingSpinner } from "../../spinner/LoadingSpinner";
+import { useTranslation } from "react-i18next";
 
 const EvolutionPage = () => {
   const [totalConsumption, setTotalConsumption] = useState<TotalConsumption[]>(
     []
   );
   const [isLoading, setIsLoading] = useState(true);
+  const { t } = useTranslation("translations");
+  const tPrefix = "pages.evolution";
 
   useEffect(() => {
     const getTotalConsumption = async () => {
@@ -39,7 +42,7 @@ const EvolutionPage = () => {
     labels: provinces,
     datasets: [
       {
-        label: "Energía consumida por provincia en KWh",
+        label: t(`${tPrefix}.chart.label`),
         data: totals,
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
@@ -73,21 +76,20 @@ const EvolutionPage = () => {
   return (
     <>
       <Title
-        title="Evolución"
-        subtitle="Esta es la evolución que ha tenido la energía renovable en nuestro país"
+        title={t(`${tPrefix}.title`)}
+        subtitle={t(`${tPrefix}.subtitle`)}
       />
       <Container>
         <Alert variant="warning">
-          <AlertHeading>Aviso importante</AlertHeading>
+          <AlertHeading>{t(`${tPrefix}.advise.title`)}</AlertHeading>
           <p>
-            Configuraciones de restricción en el navegador podrían afectar a
-            esta página.
+          {t(`${tPrefix}.advise.content`)}
           </p>
         </Alert>
       </Container>
       <ChartWrapper
-        title="Consumo por provincia 2023"
-        description="En el siguiente gráfico podemos observar el consumo total que ha gastado cada provincia de Castilla y León, el total representa el sumatorio de todos los sectores del mercado, en el mes actual"
+        title={t(`${tPrefix}.chart.title`)}
+        description={t(`${tPrefix}.chart.description`)}
         element={
           isLoading ? <LoadingSpinner /> : <Bar data={data} options={options} />
         }
